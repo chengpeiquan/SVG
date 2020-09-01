@@ -21,7 +21,7 @@
 实例代码：
 	<circle cx="100" cy="100" r="50" fill="#fff"></circle>
 ```
-#### 3.ellipse 常用属性 rx,ry 圆x,y半径。cx,cy 圆心卫星
+#### 3.ellipse 常用属性 rx,ry 圆x,y半径。cx,cy 圆心坐标
 ```
 实例代码：
 	<ellipse cx="75" cy="75" rx="20" ry="5"/>
