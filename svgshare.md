@@ -6,7 +6,7 @@
 ### 形象(AI)的全网应用
 ### UI 产品的设计
 ### SVG 动画
-## 3.有那些工具可以辅助实现
+## 3.有那些工具可以辅助生成svg
 ### svg.js snap.js 可以操作svg的dom元素（增删改），可以赋予元素事件
 ## 4.常用标签
 ### 预定义图形标签：rect（矩形）、circle（圆型）、ellipse（椭圆）、line（线）、polyline（折线）、polygon（多边形）
