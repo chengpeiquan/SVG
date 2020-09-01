@@ -22,7 +22,8 @@
 	<circle cx="100" cy="100" r="50" fill="#fff"></circle>
 ```
 #### 3.ellipse 常用属性 rx,ry 圆x,y半径。cx,cy 圆心卫星
-```实例代码：
+```
+实例代码：
 	<ellipse cx="75" cy="75" rx="20" ry="5"/>
 ```
 #### 4.line 常用属性 x1 x2 y1 y2 其中 x1 y1 为起点坐标 x2 y2 为终点坐标
@@ -57,6 +58,8 @@
 ##### 可参考keyframe使用方式，通过百分比或者from to进行动画控制/直接通过插件
 ##### demo可参考easyanimation/src/app.vue文件夹
 #### 2.js 需通过amine.js/snap.js 本文使用时amine.js，这个使用于需要动态路径情况下或者路径复杂情况下，需要通过插件计算实线长度驱动动画进行
+```
 	如果当我们需要绘制路线图时，需要获取对应的坐标点，由于本活动查询专题只提供了对应的方块位置,并不是实际坐标点，因此需要计算每个方块的中心点，根据中心点进行连接，如果需要箭头，可以通过计算对应的箭头的路径实际上是一个等腰三角形的路线，所以用sin,cos,tan等三角函数则可准确计算出箭头的位置和方向,可通过drawLineArrow（）直接得出箭头函数需要的坐标点，然后生成线路数据后，就可以通过amine进行动画了
+```
 ##### 具体参数可参考amine.js [中文官网api文档](https://www.animejs.cn/documentation/#lineDrawing "中文官网api文档")
 ##### demo可参考activity文件夹
