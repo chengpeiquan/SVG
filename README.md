@@ -35,7 +35,7 @@
 	实例代码：
 		d="M 0 10 L 59.6 10" 线路径
 		d="M10 315 L 110 215 A 30 50 0 0 1 162.55 162.45  L 172.55 152.45" 圆弧
-### 集合标签：g、symbol、defs [中文官网api文档](http://www.cnblogs.com/dxy1982/archive/2012/05/17/2503782.html  "中文官网api文档")
+### 集合标签：g、symbol、defs [详细对比可戳此处查看](http://www.cnblogs.com/dxy1982/archive/2012/05/17/2503782.html  "详细对比可戳此处查看")
 	<g>：组合标签。添加 id 属性来作为引用的钩子，可在 <g> 标签上设置这组元素的相关属性（填色、描边等等）。
 	<symbol>：模板标签。与 <g> 标签一样，通过 id 进行引用。不同点在于，symbol 元素本身不会被渲染；symbol 元素拥有属性 viewBox 和 preserveAspectRatio，这些允许 symbol 缩放图形。
 	<defs>：定义标签。不仅仅是图形对象的合集，还可以是渐变效果、蒙版、滤镜等等，设置好 id，在对应的属性（例如渐变就是 fill、蒙版就是 mask、滤镜就是 filter）中引用即可，引用格式为“url(#id)”
