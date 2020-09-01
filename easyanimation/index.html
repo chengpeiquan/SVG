@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<script src="https://cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+	<style>
+		svg line {
+			fill: #000;
+			stroke: #000;
+			stroke-width: 1px;
+		}
+
+		.arrow-line {
+			stroke-dasharray: 60;
+			stroke-dashoffset: 60;
+			transition: stroke-dashoffset ease-in .5s .2s;
+		}
+
+		.arrow-head {
+			stroke-dasharray: 9;
+			stroke-dashoffset: -9;
+			transition: stroke-dashoffset ease-in .2s;
+		}
+		.arrow-lineb {
+			stroke-dasharray: 60;
+			stroke-dashoffset: 60;
+			/* transition: stroke-dashoffset ease-in .5s .2s; */
+			animation:lineMovea 1s ease-out;
+			animation-fill-mode:both;
+		}
+		
+		.arrow-headb {
+			stroke-dasharray: 9;
+			stroke-dashoffset: -9;
+			animation:lineMoveb 1s ease-out;
+			animation-delay:1s;
+			animation-fill-mode:both;
+		}
+		
+		svg:hover line {
+			stroke-dashoffset: 0;
+		}
+
+		svg:hover .arrow-line {
+			transition: stroke-dashoffset ease-in .5s;
+		}
+
+		svg:hover .arrow-head {
+			transition: stroke-dashoffset ease-in .2s .5s;
+		}
+		@keyframes lineMovea {
+			0% {
+				stroke-dasharray:60;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+		@keyframes lineMoveb {
+			0% {
+				stroke-dasharray:-9;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+	</style>
+
+	<body>
+		<!-- <svg width="360" height="500" viewBox="0 0 89.4 12.4" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<line class="arrow-lineb" x1="0" y1="6.2" x2="59.6" y2="6.2"></line>
+			<line class="arrow-headb" x1="54.7" y1="0.7" x2="60.5" y2="6.5"></line>
+			<line class="arrow-headb" x1="54.7" y1="11.7" x2="60.5" y2="5.8"></line>
+		</svg> -->
+
+		<!-- <svg class="" width="500" height="500" viewBox="0 0 89.4 12.4" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<path class="blue" d="M 0 10 L 59.6 10" stroke="rgba(217,38,38,.8)" fill="none" stroke-width="2"></path>
+			<path class="blueb" d="M 59.6 10  L 50 0  " stroke="rgba(217,38,38,.8)" fill="none" stroke-width="2"></path>
+			<path class="blueb" d="M 59.6 10  L 50 20  " stroke="rgba(217,38,38,.8)" fill="none" stroke-width="2"></path>
+		</svg> -->
+		<svg width="360" height="500" viewBox="0 0 89.4 12.4" version="1.1" xmlns="http://www.w3.org/2000/svg">
+			<line class="arrow-line" x1="0" y1="6.2" x2="59.6" y2="6.2"></line>
+			<line class="arrow-head" x1="54.7" y1="0.7" x2="60.5" y2="6.5"></line>
+			<line class="arrow-head" x1="54.7" y1="11.7" x2="60.5" y2="5.8"></line>
+		</svg>
+
+		<!-- <button type="button" onclick="Animationa()">动画 </button> -->
+		<!-- <button type="button" onclick="Animationb()">时间轴 </button> -->
+	</body>
+	<script>
+		Animationa();
+
+		function Animationa() {
+			var myAnimation = anime({
+				targets: 'svg .blue',
+				strokeDashoffset: [anime.setDashoffset, 0], //目前这个只适用线段动画 且最好使用anime.setDashoffset 这个，会自动生成线段的对应长度
+				loop: 1,
+				easing: 'easeInOutSine',
+				duration: 1000
+			});
+			var myAnimationb = anime({
+				targets: 'svg .blueb',
+				strokeDashoffset: [anime.setDashoffset, 0], //目前这个只适用线段动画 且最好使用anime.setDashoffset 这个，会自动生成线段的对应长度
+				loop: 1,
+				easing: 'easeInOutSine',
+				duration: 1000
+			});
+			console.log(myAnimation)
+		}
+
+		function Animationb() {
+
+			var myAnimationb = anime.timeline({
+					easing: 'easeInOutSine',
+					direction: 'alternate',
+					duration: 1000
+				})
+				.add({
+					targets: 'svg .blue',
+					strokeDashoffset: [anime.setDashoffset, 0],
+					loop: 1
+				})
+				.add({
+					targets: 'svg .blueb',
+					strokeDashoffset: [anime.setDashoffset, 0],
+					loop: 1,
+				}, 1000)
+			console.log(myAnimationb)
+		}
+	</script>
+</html>

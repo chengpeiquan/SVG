@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* reset*/
+html,body,form,ol,ul,li,div,p,dl,dt,dd,h1,h2,h3,h4,h5,h6,table,th,td{margin:0px;padding:0px;}h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;font-weight:normal}ol,ul{list-style:none;}html{_filter:expression(document.execCommand("BackgroundImageCache",false,true));}body{font-size:12px;line-height:1.5;font-family:Verdana,Geneva,sans-serif,\5b8b\4f53;}a{text-decoration:none;}a:active{}img{border:0;-ms-interpolation-mode:bicubic;}.w1002{width:1002px;margin:0px auto;}.w960{width:960px;margin:0px auto;}.fl{float:left;display:inline;}.fr{float:right;display:inline;}.cl{clear:both;font-size:0;height:0;overflow:hidden}.fix:after{content:'\20';display:block;height:0;clear:both;}.fix{*zoom:1}.show{display:block}.hide{display:none}.tl,.tc,.tr{text-indent:0;}.tl{text-align:left}.tc{text-align:center;}.tc table{margin:0 auto}.tr{text-align:right}.f12{font-size:12px;}.f14{font-size:14px;}.f16{font-size:16px;}.p{text-indent:0;}.b{font-weight:bold;}.u{text-decoration:underline;}a.u:hover{text-decoration:none}.br{padding-top:5px;padding-bottom:5px;}.hr{background:#ccc;height:1px;overflow:hidden;margin-top:5px;margin-bottom:5px;}.c02{color:#A5A5A5}.c03{color:#595959}.c01{color:#000}.c00{color:#fff}.c10{color:#F00}.c20{color:#FF0}.c30{color:#0F0}.c40{color:#00F}label{font-family:Tahoma;}input,label{}th{font-weight:normal;text-align:left}.nojj{border-collapse:collapse;border-spacing:0}ins{float:right;font-family:\5b8b\4f53;}b{font-weight:bold}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Microsoft YaHei';
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+	background: #0c3a72;
+	overflow: hidden;
+	/* overflow: auto; */
+	
+}
+*::-webkit-scrollbar{
+	width: 0px;
+}	
+ul.v>li, .rl, .r {
+    letter-spacing: -0.31em;
+    /* Webkit: collapse white-space between units */
+    *letter-spacing: normal;
+    /* reset IE < 8 */
+    *word-spacing: -0.43em;
+    /* IE < 8: collapse white-space between units */
+    text-rendering: optimizespeed;
+    /*
+    Sets the font stack to fonts known to work properly with the above letter
+and word spacings. See: https://github.com/yui/pure/issues/41/
+
+The following font stack makes Pure Grids work on all known environments.
+
+* FreeSans: Ships with many Linux distros, including Ubuntu
+
+* Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+  Arial to get picked up by the browser, even though neither is available
+  in Chrome OS.
+
+* Droid Sans: Ships with all versions of Android.
+
+* Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+                                                */
+    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+.opera-only:-o-prefocus,
+.r {
+    word-spacing: -0.43em;
+}
+ul.v>li>a,
+ul.v>li>span,
+ul.v>li>i,
+div.r>div,
+ul.r>li,
+.rl>span,
+.rl>a,
+.rl>p,
+.rl>i,
+.u {
+    display: inline-block;
+    *display: inline;
+    /* IE < 8: fake inline-block */
+    *zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+    text-rendering: auto;
+    font-family: 'Microsoft YaHei';
+}
+.rl i,
+ul.v>li i {
+    font-style: normal;
+}
+
+
+ul.vf>li>a,
+ul.vf>li>span,
+ul.vf>li>i,
+ul.vf>li p,
+.uf {
+    float: left;
+    display: block;
+}
+ul.vf>li i {
+    font-style: normal;
+}
+ul.rf>li,
+div.rf>div {
+    float: left;
+}
+
+
+ul.vf>li,
+.rf,
+.clearfix {
+    display: block;
+    *zoom: 1;
+}
+ul.vf>li:before,
+ul.vf>li:after,
+.rf:before,
+.rf:after,
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+ul.vf>li:after,
+.rf:after,
+.clearfix:after {
+    clear: both;
+}
+.r>li>a, .r>li>a img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+html{
+    overflow-x:hidden;
+}
+/* @font-face {
+    font-family: 'lmqy';
+    src: url('../fonts/lmqy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+   font-display:swap;
+}
+@font-face {
+    font-family: 'zygb';
+    src: url('../fonts/zygb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+   font-display:swap;
+} */
+@media screen and (min-width : 768px) {
+    html {
+        font-size : 10px !important;
+    }
+}
+@font-face {
+	font-family: 'PingFangSemibold';
+	src:
+		url('../font/PingFangSemibold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PingFangre';
+	src:
+	url('../font/re.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
