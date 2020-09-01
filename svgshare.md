@@ -1,6 +1,6 @@
 # <center>svg 动画实战</center>
 ## 1.SVG 含义
-### svg一般是指<font color=red>可伸缩矢量图形</font>,一般使用XML描述2D图形的语言，基于<font color=red>万维网的标准</font>，是面对docoment
+### svg一般是指<font color=red>可伸缩矢量图形</font>,一般使用XML描述2D图形的语言，基于<font color=red>万维网的标准</font>
 ## 2.SVG 常用场景
 ### 图表视图(echart（有svg模式))、地图视图(WEB-GIS)
 ### 形象(AI)的全网应用
@@ -44,6 +44,6 @@
 ##### 可参考keyframe使用方式，通过百分比或者from to进行动画控制/直接通过插件
 ##### demo可参考easyanimation文件夹
 #### 2.js 需通过amine.js/snap.js 本文使用时amine.js，这个使用于需要动态路径情况下或者路径复杂情况下，需要通过插件计算实线长度驱动动画进行
-		1.如果当我们需要绘制路线图时，需要获取对应的坐标点，由于本活动查询专题只提供了对应的方块位置，因为需要我们首先计算除每个方块的圆心点，然后根据圆心点进行连接，如果需要箭头，可通过计算每个点atan4，cos,tan，然后通过
+	如果当我们需要绘制路线图时，需要获取对应的坐标点，由于本活动查询专题只提供了对应的方块位置,并不是实际坐标点，因此需要计算每个方块的中心点，根据中心点进行连接，如果需要箭头，可以通过计算对应的箭头的路径实际上是一个等腰三角形的路线，所以用sin,cos,tan等三角函数则可准确计算出箭头的位置和方向,可通过drawLineArrow（）直接得出箭头函数需要的坐标点，然后生成线路数据后，就可以通过amine进行动画了
 ##### 具体参数可参考amine.js [中文官网api文档](https://www.animejs.cn/documentation/#lineDrawing "中文官网api文档")
 ##### demo可参考activity文件夹
